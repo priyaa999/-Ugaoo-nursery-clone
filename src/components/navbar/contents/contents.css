@@ -1,0 +1,26 @@
+.list-menu {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.list-menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    font-size: .8rem;
+}
+
+.list-menu a {
+    color: green;
+    text-decoration: none;
+}
+
+
+@media (max-width: 480px){
+    .list-menu{
+        display: none;
+    }
+}
