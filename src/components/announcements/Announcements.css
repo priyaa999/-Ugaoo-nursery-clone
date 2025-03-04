@@ -1,0 +1,77 @@
+body {
+    overflow-x: hidden; 
+}
+.announcement-container {
+    width: 100%;
+    background-color: rgb(9, 64, 9);
+    text-align: center;
+}
+
+.announcement-text {
+    color: white;
+    text-decoration: none;
+    font-family: Outfit, sans-serif !important;
+    font-size: 10px;
+    padding: 0 20px;
+    display: inline-block;
+    white-space: nowrap;
+    /* min-width: max-content; */
+}
+
+/* SCROLLING ANNOUNCEMENT for small screens */
+.announcement-slider {
+    display: none;
+    width: 100%;
+    overflow: hidden;
+    /* padding:0;
+    white-space: nowrap; */
+    position: relative;
+}
+
+.announcement-bar {
+    display: flex;
+    justify-content:space-evenly;
+    padding: .1rem;
+    background-color:rgb(6, 64, 9);
+    gap: 50px;
+    line-height: 2.20;
+    letter-spacing: .06em;
+    width: max-content;
+    animation: scrollLeft 15s linear infinite;
+
+}
+
+/* Infinite scrolling effect */
+@keyframes scrollLeft {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+
+/* STATIC ANNOUNCEMENT for big screens */
+.announcement-static {
+    display: flex;
+    justify-content: center;
+    gap: 50px; 
+    padding: 10px;
+}
+
+/* On small screens (max-width 699px), show the scrolling announcement */
+@media (max-width: 699px) {
+    .announcement-static {
+        display: none; /* Hide static messages */
+    }
+    .announcement-slider {
+        display: block; /* Show scrolling messages */
+    }
+}
+
+/* On larger screens (min-width 700px), show static announcements and hide scrolling */
+@media (min-width: 700px) {
+    .announcement-slider {
+        display: none; /* Hide scrolling announcements */
+    }
+    .announcement-static {
+        display: flex; /* Show static announcements */
+    }
+}

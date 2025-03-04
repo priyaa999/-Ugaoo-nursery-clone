@@ -1,0 +1,35 @@
+.search {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius:15px;
+  margin: 10px 20px;
+  background-color: white;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.search button {
+  border: none;
+  background: transparent;
+}
+
+.search input {
+  flex: 1; /* Allows the input to take available space */
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: .6rem;
+  background: transparent;  
+  color: black; 
+}
+
+@media (max-width: 480px) {
+  .search{
+    width: 60%;
+  }
+}
+
+
